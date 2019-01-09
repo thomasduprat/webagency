@@ -561,6 +561,7 @@ footer
   #services
   {
     padding-top: 150px;
+    paddin-bottom: 100px;
   }
 
   .icones
@@ -576,7 +577,7 @@ footer
   }
 }
 
-@media screen and (max-width: 1024px) /*Petites résolutions*/
+@media screen and (max-width: 1024px)
 {
 
   #slider
