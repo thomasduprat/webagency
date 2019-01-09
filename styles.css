@@ -1,0 +1,598 @@
+@font-face 
+{
+  font-family: "robotoregular";
+  src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face 
+{
+  font-family: "robotobold";
+  src: url('fonts/Roboto-Bold.ttf');
+}
+
+@font-face 
+{
+  font-family: "robotoblack";
+  src: url('fonts/Roboto-Black.ttf');
+}
+
+@font-face 
+{
+  font-family: "robotomedium";
+  src: url('fonts/Roboto-Medium.ttf');
+}
+
+* /*Sélectionne tous les éléments et annule leurs valeurs par défaut*/
+{
+  margin: 0;
+  padding: 0;
+}
+
+a
+{
+  /* Enlève les barres sous les liens */
+  text-decoration: none;
+  /* Couleur des liens */
+  color: grey;
+  font-family: "robotomedium";
+}
+
+ul
+{
+  /* Enlève les puces */
+  list-style-type: none;
+}
+
+p
+{
+  color: grey;
+}
+
+h2
+{
+  text-align: center;
+  padding-top: 30px;
+  font-size: 40px;
+  font-family: "robotoblack";
+}
+
+h4
+{
+  font-family: "robotoblack";
+  font-size: 27px;
+
+}
+
+/**********  Règles de la partie Header  **********/
+header
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* Fixe le header */
+  position: fixed;
+  /* Taille du header et couleur (width 100% = prendra 100% de la largeur) */
+  width: 100%;
+  height: 100px;
+  /* Couleur du fond */
+  background: white; 
+  z-index: 1;
+}
+
+header ul
+{
+  display: flex;/* Mets en ligne les liens */
+}
+
+header a
+{
+  margin: 10px;/* Espace les liens entre eux*/
+  font-size: 16px;
+}
+
+header a:hover
+{
+  padding-top: 39px;
+  border-top: 3px solid #3491b2;
+  /* couleur du lien en noir */
+  color: black;
+}
+
+p
+{
+  font-family: "robotobold";
+  font-size: 15px;
+}
+
+h3
+{
+  font-family: "robotoblack";
+  font-size: 20px;
+}
+/**********  Règles de la partie Slider  **********/
+#slider
+{
+  background: url(images/slider/bg3.jpg);
+  height: 680px;
+  color: white;
+  font-family: "robotoblack";
+  font-size: 22px;
+  margin-bottom: 100px;
+}
+
+#slider h1
+{
+  padding-left: 260px;
+  padding-top: 250px;
+}
+
+#slider p
+{
+  padding-left: 260px;
+  padding-top: 35px;
+  color: white;
+}
+
+#slider span
+{
+  color: #5cadd3;
+}
+
+.bouton
+{
+  display: block;
+  /* Taille du bouton */
+  width: 118px;
+  height: 40px;
+  background-color: #5cadd3;
+  color: white;
+  font-size: 18px;
+  /* Texte centrer dans le block */
+  line-height: 40px;
+  text-align: center;
+  border-radius: 3px;
+  border-bottom: 3px solid #4494bb;
+  /* Position du bouton */
+  margin-left: 260px;
+  margin-top: 35px;
+}
+
+.fa-chevron-left
+{
+  display: block;
+  float: left;
+  margin-top: 350px;
+  color: white;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  /* 1. coin en haut à gauche */
+  /* 2. coin en haut à droite */
+  /* 3. coin en bas à droite  */
+  /* 4. coin en bas à gauche  */ 
+  border-radius: 0 50% 50% 0;/*Ici on applique un arrondi en haut et en bas à droite*/
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.fa-chevron-right
+{
+  display: block;
+  float: right;
+  margin-top: 350px;
+  color: white;
+  padding-right: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  border-radius: 50% 0 0 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/**********  Règles de la partie Services  **********/
+
+/*Cercle bleu*/
+.fa-circle
+{
+  /*permets de décaler horizontalement et/ou verticalement ce qui permets des chevauchements*/
+  color: #5badd3;
+  border: 4px solid white;
+  border-radius: 50%;/*Permet la bordure en cercle*/
+}
+
+.deco /* Décoration après chaque titre <h2> */
+{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+}
+
+.trait-gauche
+{
+    height: 1px;/*Hauteur*/
+    width: 58px;/*Largeur*/
+    background-color: #a8a8a8;
+    margin-top: 12px;
+}
+
+.trait-droit
+{
+    height: 1px;
+    width: 58px;
+    background-color: #a8a8a8;
+    margin-top: 12px;
+}
+
+.intro
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.liste-services
+{
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  height: 319px;
+  margin-top: 60px;
+  margin-left: 120px;
+}
+
+
+#body 
+{
+  display: flex;
+  flex-wrap: wrap;/*Les éléments passent à la lignes quand la dimension de l'écran est réduit.*/
+  justify-content: center;
+  margin-bottom: 100px;
+  padding: 50px;
+}
+
+.fa-chart-line, .fa-cubes, .fa-chart-pie 
+{
+  padding: 15px;
+  font-size: 25px;
+  border: 1px solid #dbdbdb;
+  border-radius: 50%;/* Permet la bordure en cercle */
+  color: #5cadd3;
+}
+
+.icones
+{
+  position: relative;
+  right: 80px;
+  bottom: 50px;
+}
+
+.icones .fa-circle
+{
+  position: relative;
+  right: 13px;
+  bottom: 3px;
+  font-size: 13px;
+}
+
+.ecran
+{
+  height: 300px;
+  width: 490px;
+}
+
+/**********  Règles de la partie Projets  **********/
+#projets
+{
+  background-color: #efefef;
+  padding-top: 40px;
+}
+
+.menu-2
+{
+  display: flex;
+  justify-content: center;
+}
+
+.menu-2 ul
+{
+  background-color: #d6d6d6;
+  border-radius: 4px;
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+/*Taille des boutons*/
+.menu-2 li
+{
+  width: 100px;
+  height: 40px;
+}
+
+
+.menu-2 a
+{
+  /*Transforme les liens en boutons*/
+  display: block;
+  /* Centre verticalement le texte */
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  color: #656565;
+}
+
+/*Flèches sous les boutons*/
+.fa-caret-down
+{
+  position: relative;
+  /*La propriété bottom définit la distance dont le bord bas de l'élément est déplacé au-dessus de sa position normale.*/
+  bottom: 15px;
+  left: 40%;
+  color: #468cad;
+  visibility: hidden;
+}
+
+/* Survol des boutons */
+.menu-2 a:hover
+{
+  background-color: #5cadd3;
+  color: white;
+  border-bottom: 3px solid #4494bb;
+  border-radius: 4px;
+}
+
+.menu-2 a:hover .fa-caret-down 
+{
+  visibility: visible;
+}
+
+/**********  PORTFOLIO  **********/
+.portfolio 
+{
+  /*Image de gauche à droite, passage à la ligne et centrer*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 100px;
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+/* Taille des conteneur d'images */
+.image
+{ 
+  height: 200px;
+  margin: 20px;
+}
+
+.image img
+{
+  height: 200px;/*Hauteur des images pour quelles ne dépassent pas du cadre*/
+}
+
+.legende
+{
+  position: relative;/*Permets de décaler horizontalement et/ou verticalement ce qui permets des chevauchements*/
+  bottom: 75px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);/*Permets un arrière plan avec 50% de transparence*/
+  width: 300px;
+  height: 71px;
+  visibility: hidden;/*Cache la légende*/
+}
+
+/* Affiche la légende au survol de l'image */
+figure:hover figcaption 
+{
+  visibility: visible;
+}
+
+.legende h3
+{
+  padding-left: 8px;
+  padding-top: 8px;
+}
+
+.legende p
+{
+  padding-left: 8px;
+  font-size: 15px;
+  color: white;
+}
+
+.fa-eye
+{
+  background-color: #5badd3;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;/*En augmentant les marges intérieures, permets d'agrandir l'image*/
+  /*Position de l'oeil*/
+  position: relative;
+  bottom: 70px;
+  left: 240px;
+}
+
+
+/**********  Règles de la partie Contact  **********/
+#contact iframe 
+{
+  width: 100%;/*Largueur 100% l'image prendra la totalité de la largueur.*/
+}
+
+#contact 
+{
+  position: relative;
+}
+
+iframe, #fond-bleu 
+{
+  width: 100%;
+  position: absolute;/*Pour positionner l’élément par rapport à un parent(en l'occurancent #contact) il suffit de définir la propriété position:relative à ce parent.*/
+  height: 750px;
+  background-color: rgba(91, 173, 211, 0.5);
+  display: flex;
+  justify-content: flex-end;/*Les éléments s'alignent au côté droit du conteneur.*/
+  align-items: center;/*Les éléments s'alignent au centre vertical du conteneur.*/
+}
+
+form
+{
+  background-color: rgba(255,255,255, .6);
+  width: 300px;
+  height: 64%;/*La référence est la hauteur de l’élément parent. 
+  Si pas de Hauteur déterminer au parents alors cela ne marchera pas*/
+  border-radius: 2px;
+  margin-right: 160px;
+
+  padding: 10px;/*Avec une valeur, celle-ci définira la marge pour les quatre côtés de la boîte.*/
+}
+
+input 
+{
+  width: 95%;
+  height: 25px;
+  border-radius: 3px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-family: "robotobold";
+}
+
+textarea 
+{
+  width: 95%;
+  height: 100px;
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-top: 20px;
+  font-family: "robotobold";
+}
+
+form span
+{
+  color: #525459;
+}
+
+form p
+{
+  margin-top: 10px;
+}
+
+.bouton-2
+{
+  font-family: "robotobold";
+  width: 100px;
+  height: 40px;
+  background-color: #5cadd3;
+  color: white;
+
+  font-size: 17px;
+  /* Texte centrer dans le block */
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #5cadd3;
+  border-bottom: 3px solid #4494bb;
+  padding: 0;
+}
+
+/**********  Règles de la partie Footer  **********/
+footer
+{
+  position: absolute;
+  top: 750px;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  flex-direction: column;
+}
+
+#icons 
+{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.fa-twitter-square 
+{
+  color: #3391b2;
+}
+.fa-google-plus-square 
+{
+  color: #3391b2;
+}
+
+.fa-facebook-square
+{
+  color: #3391b2;
+}
+
+.copyright 
+{
+  color: grey;
+  font-family: "robotomedium";
+  font-size: 12px;
+}
+
+/**********  Règles des Média Queries **********/
+@media screen and (max-width: 780px) /*Petites résolutions*/
+{
+  header nav ul
+  {
+    flex-direction: column;
+  }
+
+  header a:hover
+  {
+    border: none;
+  }
+
+  #slider
+  {
+    display: none;
+  }
+
+  #services
+  {
+    padding-top: 150px;
+  }
+
+  .icones
+  {
+    position: relative;
+    bottom: 90px;
+  }
+
+  form
+  {
+    margin: 50px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) /*Petites résolutions*/
+{
+
+  #slider
+  {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+  }
+
+  #services
+  {
+    padding-top: 150px;
+  }
+
+  form
+  {
+    margin: 50px;
+    justify-content: center;
+  }
+}
