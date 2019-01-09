@@ -93,7 +93,7 @@ header a
 header a:hover
 {
   padding-top: 39px;
-  border-top: 3px solid #3491b2;
+  border-top: 4px solid #3491b2;
   /* couleur du lien en noir */
   color: black;
 }
