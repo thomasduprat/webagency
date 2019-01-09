@@ -279,6 +279,7 @@ h3
 {
   height: 300px;
   width: 490px;
+  border: 2px solid red;
 }
 
 /**********  Règles de la partie Projets  **********/
