@@ -548,7 +548,7 @@ footer
 
 
 /**********  Règles des Média Queries **********/
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 780px */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 768px */
 @media screen and (max-width: 768px)
 {
   #logo
@@ -783,12 +783,10 @@ footer
 {
   form
   {
-
     width: 500px;
     height: 70%;
     padding-top: 20px;
     right: 1010px;
-
   }
 
   input
@@ -810,5 +808,29 @@ footer
   .image, .image img
   {
     height: 250px;
+  }
+
+  .icones-pie
+  {
+    bottom: 60px;
+  }
+
+  .icones-line
+  {
+    bottom: 60px;
+  }
+
+  .icones-cube
+  {
+    bottom: 60px;
+  }
+  .fa-chart-line, .fa-cubes, .fa-chart-pie 
+  {
+    font-size: 30px;
+  }
+
+  .icones-pie .fa-circle, .icones-cube .fa-circle, .icones-line .fa-circle
+  {
+    bottom: 5px;
   }
 }
