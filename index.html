@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>WebAgency : l'agence de tous vos projets !</title>
+	<meta name="description" content="Une agence web spécialisée dans la création de sites internet à Paris. Référencement et communication web. Augmenter sa visibilité.">
 </head>
 
 <body>
@@ -26,15 +27,15 @@
 
 <!-- SLIDER -->
 	<section id="slider">
-		<a href="#"><i class="fas fa-chevron-left"></i></a>
-    	<a href="#"><i class="fas fa-chevron-right"></i></a>
+		<div id="left"><a href="#"><i class="fas fa-chevron-left"></i></a></div>
+    	<div id="right"><a href="#"><i class="fas fa-chevron-right"></i></a></div>
 
-
+	
     	<h1><span>WEBAGENCY</span> : L'AGENCE DE TOUS<br> VOS PROJETS !</h1>
-
 		<p>Vous avez un projet ? Nous vous aiderons à le réaliser !</p>
-
     	<a href="contact" class="bouton">Plus d'infos</a>	
+
+    	
 	</section>
 
 	    <div id="mobile">
@@ -184,12 +185,26 @@
 		</div>
 	</section>
 
+			<div id="banner">
+				<div class="banner-text">        
+				<form method="post" action="exemple.php">
+					<h4>Nous Contacter</h4>
+					<p><span>WebAgency SAS</span><br> 25 rue d'Hauteville, 75010 PARIS<br><u>Tél :</u> 01 02 03 04 05</p>
+					<input type="text" name="nom" placeholder="Nom">
+					<input type="email" name="email" placeholder="Email">
+					<input type="text" name="Objet" placeholder="Objet">
+					<textarea name="message" placeholder="Message"></textarea>
+					<input class="bouton-2" type="submit" value="Envoyer">
+				</form>
+				</div>
+			</div>
+
+
 <!-- CONTACT -->
 	<section id="contact">
 
-		<div id="fond-bleu"></div>
 		<!-- Carte Google Maps -->
-		<div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2216096807224!2d2.347636915674888!3d48.87305177928887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1546423495666" width="600" height="750" style="border:0" allowfullscreen></iframe>
+			<div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2216096807224!2d2.347636915674888!3d48.87305177928887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1546423495666" width="600" height="750" style="border:0" allowfullscreen></iframe>
 
 
 		<!-- Formulaire -->
@@ -201,8 +216,8 @@
 					<input type="text" name="Objet" placeholder="Objet">
 					<textarea name="message" placeholder="Message"></textarea>
 					<input class="bouton-2" type="submit" value="Envoyer">
-			</form>
-		</div>
+				</form>
+			</div>
 
 		<footer>
 			<div id="icons">

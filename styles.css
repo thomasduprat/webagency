@@ -26,9 +26,6 @@ a
 {
   /*Enlève les barres sous les liens*/
   text-decoration: none;
-  /*Couleur des liens*/
-  color: grey;
-  font-family: "robotomedium";
 }
 
 ul
@@ -37,10 +34,15 @@ ul
   list-style-type: none;
 }
 
-p
+p, a
 {
   color: grey;
   font-family: "robotomedium";
+}
+
+h2, h3, h4
+{
+  font-family: "robotoblack";  
 }
 
 h2
@@ -48,12 +50,10 @@ h2
   text-align: center;
   padding-top: 30px;
   font-size: 40px;
-  font-family: "robotoblack";
 }
 
 h4
 {
-  font-family: "robotoblack";
   font-size: 27px;
 }
 
@@ -104,7 +104,6 @@ p
 
 h3
 {
-  font-family: "robotoblack";
   font-size: 20px;
 }
 
@@ -118,6 +117,7 @@ h3
   font-family: "robotoblack";
   font-size: 22px;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 
 #slider h1
@@ -157,34 +157,44 @@ h3
   margin-top: 35px;
 }
 
-.fa-chevron-left
+#left
 {
-  float: left;
-  padding-right: 15px;
-  padding-left: 5px;
-  /* 1. coin en haut à gauche */
-  /* 2. coin en haut à droite */
-  /* 3. coin en bas à droite  */
-  /* 4. coin en bas à gauche  */ 
-  border-radius: 0 50% 50% 0;/*Ici on applique un arrondi en haut et en bas à droite*/
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 60px;
+  height: 60px;
+  top: 360px;
+  left: -30px;
 }
 
-.fa-chevron-right
+#right
 {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 60px;
+  height: 60px;
+  top: 300px;
   float: right;
-  padding-right: 5px;
-  padding-left: 15px;
-  border-radius: 50% 0 0 50%;
+  right: -30px;
 }
 
 .fa-chevron-right, .fa-chevron-left
 {
-  margin-top: 350px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  display: block;
   color: white;
-  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 16px;
+}
+
+.fa-chevron-left
+{
+  left: 35px;
+}
+
+.fa-chevron-right
+{
+  right: -8px;
 }
 
 /**********  Règles de la partie Services  **********/
@@ -197,12 +207,20 @@ h3
   border-radius: 50%;/*Permet la bordure en cercle*/
 }
 
-.deco /*Décoration après chaque titre <h2>*/
+.deco
+{
+  padding: 10px;
+}
+
+.intro
+{
+  text-align: center;
+}
+
+.intro, .deco
 {
   display: flex;
   justify-content: center;
-  padding: 10px;
-
 }
 
 .trait-gauche, .trait-droit
@@ -213,13 +231,6 @@ h3
   margin-top: 12px;
 }
 
-.intro
-{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
 .liste-services
 {
   display: flex;
@@ -228,7 +239,6 @@ h3
   margin-top: 60px;
   margin-left: 120px;
 }
-
 
 #container 
 {
@@ -246,13 +256,6 @@ h3
   border: 1px solid #dbdbdb;
   border-radius: 50%;/* Permet la bordure en cercle */
   color: #5cadd3;
-}
-
-.icones
-{
-  position: relative;
-  right: 80px;
-  bottom: 50px;
 }
 
 .icones-pie, .icones-line, .icones-cube
@@ -303,27 +306,26 @@ h3
 {
   width: 100px;
   height: 43px;
-  border: 2px solid green;
 }
 
 .menu-2 a
 {
-  /*Transforme les liens en boutons*/
-  display: block;
+
   /*Centre verticalement le texte*/
   line-height: 40px;
   display: flex;
   justify-content: center;
   color: #656565;
+  position: relative;
 }
 
 /*Flèches sous les boutons*/
 .fa-caret-down
 {
-  position: relative;
-  /*La propriété bottom définit la distance dont le bord bas de l'élément est déplacé au-dessus de sa position normale.*/
+  position: absolute;
+  /*La propriété top définit la distance dont le bord bas de l'élément est déplacé au-dessus de sa position normale.*/
   top: 28px;
-  right: 28px;
+  right: 40px;
   color: #468cad;
   visibility: hidden;
 }
@@ -367,13 +369,12 @@ h3
 /*Taille des conteneur d'images*/
 .image
 { 
-  height: 200px;
   margin: 20px;
 }
 
-.image img
+.image, .image img
 {
-  height: 200px;/*Hauteur des images pour quelles ne dépassent pas du cadre*/
+  height: 200px;
 }
 
 .legende
@@ -465,8 +466,8 @@ form
 input 
 {
   height: 25px;
-  padding: 3px;
-  margin-bottom: 10px;
+  padding: 4px;
+  margin-bottom: 8px;
 }
 
 textarea 
@@ -533,16 +534,7 @@ footer
   margin-bottom: 10px;
 }
 
-.fa-twitter-square 
-{
-  color: #3391b2;
-}
-.fa-google-plus-square 
-{
-  color: #3391b2;
-}
-
-.fa-facebook-square
+.fa-twitter-square, .fa-google-plus-square , .fa-facebook-square
 {
   color: #3391b2;
 }
@@ -556,12 +548,16 @@ footer
 
 
 /**********  Règles des Média Queries **********/
-@media screen and (max-width: 780px) /*Petites résolutions*/
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 780px */
+@media screen and (max-width: 768px)
 {
+  #logo
+  {
+    margin-top: 5px;
+  }
   #mobile
   {
-    display: block;
-    background-image: url(images/slider/bg1.jpg);
+    background-image: url(images/slider/bg5.png);
     background-size: cover;
     width: 100%;
     height: 350px;
@@ -584,6 +580,11 @@ footer
     padding: 10px;
   }
 
+  .message p
+  {
+    color: white;
+  }
+
   .bouton
   {  
     padding: 7px;
@@ -603,7 +604,7 @@ footer
   header
   {
     flex-direction: column;
-    height: 140px;
+    height: 150px;
     position: fixed;
     top: 0;
   }
@@ -666,7 +667,7 @@ footer
   {
     position: relative;
     left: 10px;
-    bottom: 175px;
+    bottom: 160px;
   }
   .fa-chart-line, .fa-cubes, .fa-chart-pie 
   {
@@ -695,54 +696,119 @@ footer
 
   form
   {
-  left: 15px;
-  bottom: 120px;
-  width: 85%;
-  position: absolute;
-  padding: 10px;/*Avec une valeur, celle-ci définira la marge pour les quatre côtés de la boîte.*/
+    visibility: hidden;
+  }
+
+  #banner form
+  {
+    visibility: visible;
+    width: 80%;
+    position: relative;
+    left: 12px;
+  }
+
+  .banner-text
+  {
+    text-align: center;
+    background-color: #efefef;
+    padding-bottom: 10px;
   }
 
 }
-
-@media screen and (max-width: 1024px)
+/* Seulement sur les écrans dont la largeur de la fenêtre est comprise entre 768px et 1024px */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
 {
-
-  #slider
+  #mobile
   {
-    background-position: center;
+    background-image: url(images/slider/bg1.jpg);
   }
 
+  #container 
+  {
+    margin-bottom: 0px;
+    padding: 0px;
+  }
 
   #services
   {
-    padding-top: 150px;
+    margin-top: 50px;
   }
 
-  .fa-chevron-left
-{
-  display: block;
-  float: left;
-  margin-top: 350px;
-  color: white;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 5px;
-  border-radius: 0 50% 50% 0;
-  background-color: rgba(0, 0, 0, 0.2);
-}
+  .service
+  {
+    height: 110px;
+  }
 
-.fa-chevron-right
-{
-  display: block;
-  float: right;
-  margin-top: 350px;
-  color: white;
-  padding-right: 5px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  border-radius: 50% 0 0 50%;
-  background-color: rgba(0, 0, 0, 0.2);
+  .icones-pie
+  {
+    bottom: 110px;
+  }
+
+  .icones-line
+  {
+    bottom: 110px;
+  }
+
+  .icones-cube
+  {
+    bottom: 110px;
+  }
+  .fa-chart-line, .fa-cubes, .fa-chart-pie 
+  {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .icones-pie .fa-circle, .icones-cube .fa-circle, .icones-line .fa-circle
+  {
+    right: 12px;
+    bottom: 1px;
+  }
+  
+  .portfolio
+  {
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #banner form
+  {
+    left: 58px;
+    margin-bottom: 30px;
+  }
 }
+/* Sur les écrans dont la largeur de la fenêtre fait au minimum 2000px */
+@media only screen  and (min-width : 2000px) 
+{
+  form
+  {
+
+    width: 500px;
+    height: 70%;
+    padding-top: 20px;
+    right: 1010px;
+
+  }
+
+  input
+  {
+    margin-bottom: 20px;
+  }
+
+  #banner form
+  {
+    display: none;
+  }
+
+  #slider
+  {
+    background: url(images/slider/bg1.jpg);
+    height: 880px;
+  }
+
+  .image, .image img
+  {
+    height: 250px;
+  }
 }
