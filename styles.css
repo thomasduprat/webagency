@@ -57,6 +57,11 @@ h4
   font-size: 27px;
 }
 
+:root /* Pour éviter des répétitions*/
+{
+  --main-color: white;
+}
+
 /**********  Règles de la partie Header  **********/
  #mobile /*Voir media queries*/
 {
@@ -65,7 +70,6 @@ h4
 
 header
 {
-  display: flex;
   justify-content: space-around;
   align-items: center;
   /*Fixe le header*/
@@ -78,7 +82,7 @@ header
   z-index: 1;/*Détermine l'ordre des différentes couches que formeront les éléments, dans ce cas le header sura toujours devant*/
 }
 
-header ul
+header, header ul
 {
   display: flex;/*Mets en ligne les liens*/
 }
@@ -113,7 +117,7 @@ h3
 {
   background: url(images/slider/bg3.jpg);
   height: 680px;
-  color: white;
+  color: var(--main-color);
   font-family: "robotoblack";
   font-size: 22px;
   margin-bottom: 100px;
@@ -122,21 +126,49 @@ h3
 
 #slider h1
 {
-  padding-left: 260px;
   padding-top: 250px;
 }
 
 #slider p
 {
-  padding-left: 260px;
   padding-top: 35px;
-  color: white;
+  color: var(--main-color);
+}
+
+#slider h1, #slider p
+{
+  padding-left: 260px;
 }
 
 #slider span
 {
   color: #5cadd3;
 }
+
+#barres
+{
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  top: 156px;
+}
+
+.barre-gauche
+{
+  background-color: #5cadd3;
+}
+
+.barre-droite
+{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.barre-gauche, .barre-droite
+{
+  height: 5px;
+  width: 50%;
+}
+
 
 .bouton
 {
@@ -145,7 +177,7 @@ h3
   width: 118px;
   height: 40px;
   background-color: #5cadd3;
-  color: white;
+  color: var(--main-color);
   font-size: 18px;
   /*Texte centrer dans le block*/
   line-height: 40px;
@@ -159,30 +191,29 @@ h3
 
 #left
 {
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: relative;
-  width: 60px;
-  height: 60px;
   top: 360px;
   left: -30px;
 }
 
 #right
 {
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: relative;
-  width: 60px;
-  height: 60px;
   top: 300px;
   float: right;
   right: -30px;
 }
 
+#left, #right
+{
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
 .fa-chevron-right, .fa-chevron-left
 {
-  color: white;
+  color: var(--main-color);
   position: relative;
   top: 16px;
 }
@@ -217,7 +248,7 @@ h3
   text-align: center;
 }
 
-.intro, .deco
+.intro, .deco, #container 
 {
   display: flex;
   justify-content: center;
@@ -242,9 +273,7 @@ h3
 
 #container 
 {
-  display: flex;
   flex-wrap: wrap;/*Les éléments passent à la lignes quand la dimension de l'écran est réduit.*/
-  justify-content: center;
   margin-bottom: 50px;
   padding: 50px;
 }
@@ -334,7 +363,7 @@ h3
 .menu-2 a:hover
 {
   background-color: #5cadd3;
-  color: white;
+  color: var(--main-color);
   border-bottom: 3px solid #4494bb;
 }
 
@@ -381,7 +410,7 @@ h3
 {
   position: relative;/*Permets de décaler horizontalement et/ou verticalement ce qui permets des chevauchements*/
   bottom: 75px;
-  color: white;
+  color: var(--main-color);
   background-color: rgba(0, 0, 0, 0.5);/*Permets un arrière plan avec 50% de transparence*/
   width: 300px;
   height: 71px;
@@ -402,7 +431,7 @@ figure:hover figcaption
 .legende p
 {
   font-size: 15px;
-  color: white;
+  color: var(--main-color);
 }
 
 .legende h3, .legende p
@@ -461,6 +490,7 @@ form
   padding: 10px;/*Avec une valeur, celle-ci définira la marge pour les quatre côtés de la boîte.*/
   padding-left: 20px; 
   padding-right: 20px;
+  border-radius: 2px;
 }
 
 input 
@@ -503,7 +533,7 @@ form p
   width: 100px;
   height: 40px;
   background-color: #5cadd3;
-  color: white;
+  color: var(--main-color);
   font-size: 17px;
   /*Texte centrer dans le block*/
   text-align: center;
@@ -524,7 +554,6 @@ footer
   display: flex;
   justify-content: center;
   align-items: center;
-  color: grey;
   flex-direction: column;
 }
 
@@ -541,9 +570,13 @@ footer
 
 .copyright 
 {
-  color: grey;
   font-family: "robotomedium";
   font-size: 12px;
+}
+
+footer, .copyright
+{
+  color: grey;  
 }
 
 
@@ -559,9 +592,8 @@ footer
   {
     background-image: url(images/slider/bg5.png);
     background-size: cover;
-    width: 100%;
     height: 350px;
-    margin-top: 150px;
+    margin-top: 160px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -575,14 +607,15 @@ footer
   .message
   {
     text-align: center;
-    color: white;
+    align-items: flex-end;
+    color: var(--main-color);
     font-family: "robotoblack";
     padding: 10px;
   }
 
   .message p
   {
-    color: white;
+    color: var(--main-color);
   }
 
   .bouton
@@ -603,8 +636,7 @@ footer
 
   header
   {
-    flex-direction: column;
-    height: 150px;
+    height: 170px;
     position: fixed;
     top: 0;
   }
@@ -614,14 +646,14 @@ footer
     border: none;
   }
 
-  header ul, .menu-2 ul
+  header, header ul, .menu-2 ul
   {
     flex-direction: column;
   }
 
-  header a
+  header li
   {
-    margin: 10px;
+    padding: 3px;
   }
 
   #tout a:hover
@@ -644,31 +676,27 @@ footer
     height: 70%;
   }
 
-  .fa-chevron-left, .fa-chevron-right
+  .fa-chevron-left, .fa-chevron-right, form
   {
     visibility: hidden;
   }
 
   .icones-pie
   {
-    position: relative;
-    left: 10px;
     bottom: 212px;
   }
 
-  .icones-line
+  .icones-line, .icones-cube
   {
-    position: relative;
-    left: 10px;
     bottom: 160px;
   }
 
-  .icones-cube
+  .icones-pie, .icones-line,  .icones-cube
   {
     position: relative;
     left: 10px;
-    bottom: 160px;
   }
+
   .fa-chart-line, .fa-cubes, .fa-chart-pie 
   {
     padding: 12px;
@@ -694,11 +722,6 @@ footer
     padding-top: 20px;
   }
 
-  form
-  {
-    visibility: hidden;
-  }
-
   #banner form
   {
     visibility: visible;
@@ -710,8 +733,9 @@ footer
   .banner-text
   {
     text-align: center;
-    background-color: #efefef;
+    padding-top: 10px;
     padding-bottom: 10px;
+    background-color: #c1c1c1;
   }
 
 }
@@ -739,20 +763,11 @@ footer
     height: 110px;
   }
 
-  .icones-pie
+  .icones-pie, .icones-line,  .icones-cube
   {
     bottom: 110px;
   }
 
-  .icones-line
-  {
-    bottom: 110px;
-  }
-
-  .icones-cube
-  {
-    bottom: 110px;
-  }
   .fa-chart-line, .fa-cubes, .fa-chart-pie 
   {
     padding: 12px;
@@ -775,7 +790,6 @@ footer
   #banner form
   {
     left: 58px;
-    margin-bottom: 30px;
   }
 }
 /* Sur les écrans dont la largeur de la fenêtre fait au minimum 2000px */
@@ -805,25 +819,21 @@ footer
     height: 880px;
   }
 
+  #barres
+  {
+    top: 356px;
+  }
+
   .image, .image img
   {
     height: 250px;
   }
 
-  .icones-pie
+  .icones-pie, .icones-line,  .icones-cube
   {
     bottom: 60px;
   }
 
-  .icones-line
-  {
-    bottom: 60px;
-  }
-
-  .icones-cube
-  {
-    bottom: 60px;
-  }
   .fa-chart-line, .fa-cubes, .fa-chart-pie 
   {
     font-size: 30px;
