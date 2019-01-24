@@ -1,4 +1,4 @@
-- OpenClassrooms Projet 1 WebAgency -
+- OpenClassrooms Projet 1 WebAgency 
 Intégrez la maquette du site d'une agence web
 
 url : https://class-web-agency.netlify.com/
@@ -22,11 +22,11 @@ Vous devrez intégrer au moins un effet d'animation CSS sur le site (celui que v
 N'oubliez toutefois pas d'adapter le rendu pour vos visiteurs utilisant des terminaux mobiles.
 
 
-- Livrables attendus -
+- Livrables attendus 
 
 Code source complet du projet (HTML/CSS et autres fichiers nécessaires, zippés).
 
-- Compétences à valider -
+- Compétences à valider 
 
 - Traduire les différentes zones en langage web.
 - Assembler et structurer les différentes zones.
