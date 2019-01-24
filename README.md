@@ -4,7 +4,7 @@ Intégrez la maquette du site d'une agence web
 url : https://class-web-agency.netlify.com/
 
 
-- Énoncé : -
+- Énoncé :
 
 Vous venez d'être embauché(e) par une agence Web, la WebAgency, qui réalise des sites web pour différents clients. Cependant, ils reconnaissent eux-mêmes que leur site actuel est vieillissant car ils ont peu de temps pour travailler dessus. Certes, il paraît que les cordonniers sont les plus mal chaussés, mais tout de même...
 
