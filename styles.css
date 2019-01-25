@@ -133,11 +133,6 @@ h3
   padding-top: 35px;
 }
 
-#slider h1, #slider p
-{
-  
-}
-
 #slider span
 {
   color: #5cadd3;
@@ -589,6 +584,7 @@ footer, .copyright
   {
     margin-top: 5px;
   }
+
   #mobile
   {
     background-image: url(images/slider/bg5.png);
