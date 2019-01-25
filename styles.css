@@ -59,7 +59,7 @@ h4
 
 :root /* Pour éviter des répétitions*/
 {
-  --main-color: white;
+  -main-color: white;
 }
 
 /**********  Règles de la partie Header  **********/
