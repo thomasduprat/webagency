@@ -59,7 +59,7 @@ h4
 
 :root /* Pour éviter des répétitions*/
 {
-  --text-color: white;
+  --main-color: #ffffff;
 }
 
 /**********  Règles de la partie Header  **********/
@@ -117,7 +117,7 @@ h3
 {
   background: url(images/slider/bg3.jpg);
   height: 680px;
-  color: var(--text-color);
+  color: var(--main-color);
   font-family: "robotoblack";
   font-size: 22px;
   margin-bottom: 100px;
