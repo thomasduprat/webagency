@@ -59,7 +59,7 @@ h4
 
 :root /* Pour éviter des répétitions*/
 {
-  -main-color: white;
+  --main-color: white;
 }
 
 /**********  Règles de la partie Header  **********/
@@ -117,7 +117,7 @@ h3
 {
   background: url(images/slider/bg3.jpg);
   height: 680px;
-  color: var(-main-color);
+  color: var(--main-color);
   font-family: "robotoblack";
   font-size: 22px;
   margin-bottom: 100px;
@@ -132,7 +132,7 @@ h3
 #slider p
 {
   padding-top: 35px;
-  color: var(-main-color);
+  color: var(--main-color);
 }
 
 #slider h1, #slider p
@@ -183,7 +183,7 @@ h3
   width: 118px;
   height: 40px;
   background-color: #5cadd3;
-  color: var(-main-color);
+  color: var(--main-color);
   font-size: 18px;
   /*Texte centrer dans le block*/
   line-height: 40px;
@@ -219,7 +219,7 @@ h3
 
 .fa-chevron-right, .fa-chevron-left
 {
-  color: var(-main-color);
+  color: var(--main-color);
   position: relative;
   top: 16px;
 }
@@ -372,7 +372,7 @@ h3
 .menu-2 a:hover
 {
   background-color: #5cadd3;
-  color: var(-main-color);
+  color: var(--main-color);
   border-bottom: 3px solid #4494bb;
 }
 
@@ -419,7 +419,7 @@ h3
 {
   position: relative;/*Permets de décaler horizontalement et/ou verticalement ce qui permets des chevauchements*/
   bottom: 75px;
-  color: var(-main-color);
+  color: var(--main-color);
   background-color: rgba(0, 0, 0, 0.5);/*Permets un arrière plan avec 50% de transparence*/
   width: 300px;
   height: 71px;
@@ -440,7 +440,7 @@ figure:hover figcaption
 .legende p
 {
   font-size: 15px;
-  color: var(-main-color);
+  color: var(--main-color);
 }
 
 .legende h3, .legende p
@@ -542,7 +542,7 @@ form p
   width: 100px;
   height: 40px;
   background-color: #5cadd3;
-  color: var(-main-color);
+  color: var(--main-color);
   font-size: 17px;
   /*Texte centrer dans le block*/
   text-align: center;
@@ -617,14 +617,14 @@ footer, .copyright
   {
     text-align: center;
     align-items: flex-end;
-    color: var(-main-color);
+    color: var(--main-color);
     font-family: "robotoblack";
     padding: 10px;
   }
 
   .message p
   {
-    color: var(-main-color);
+    color: var(--main-color);
   }
 
   .bouton
