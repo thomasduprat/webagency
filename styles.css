@@ -137,12 +137,18 @@ h3
 
 #slider h1, #slider p
 {
-  padding-left: 260px;
+  
 }
 
 #slider span
 {
   color: #5cadd3;
+}
+
+#description
+{
+  margin: auto;
+  width: 70%;
 }
 
 #barres
@@ -185,7 +191,7 @@ h3
   border-radius: 3px;
   border-bottom: 3px solid #4494bb;
   /*Position du bouton*/
-  margin-left: 260px;
+
   margin-top: 35px;
 }
 
@@ -798,6 +804,13 @@ footer, .copyright
 /* Sur les écrans dont la largeur de la fenêtre fait au minimum 2000px */
 @media only screen  and (min-width : 2000px) 
 {
+
+  #description
+  {
+    margin: auto;
+    width: 1200px;
+  }
+
   form
   {
     width: 500px;
