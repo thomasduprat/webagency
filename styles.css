@@ -117,7 +117,7 @@ h3
 {
   background: url(images/slider/bg3.jpg);
   height: 680px;
-  color: var(--my-var, white);
+  color: var(--text-color);
   font-family: "robotoblack";
   font-size: 22px;
   margin-bottom: 100px;
