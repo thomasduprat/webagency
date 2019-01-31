@@ -79,7 +79,7 @@ header
   height: 100px;
   /*Couleur du fond*/
   background: white; 
-  z-index: 1;/*Détermine l'ordre des différentes couches que formeront les éléments, dans ce cas le header sura toujours devant*/
+  z-index: 1000;/*Détermine l'ordre des différentes couches que formeront les éléments, dans ce cas le header sura toujours devant*/
 }
 
 header, header ul
@@ -457,16 +457,15 @@ figure:hover figcaption
 #contact 
 {
   position: relative;
+  height: 750px;
 }
 
 #map
 {
   background-color: #5badd3;
   width: 100%;
-  position: absolute;/*Pour positionner l’élément par rapport à un parent(en l'occurancent #contact) il suffit de définir la propriété position:relative à ce parent.*/
-  display: flex;
-  justify-content: flex-end;/*Les éléments s'alignent au côté droit du conteneur.*/
-  align-items: center;/*Les éléments s'alignent au centre vertical du conteneur.*/
+  position: absolute;
+  height: 100%;
 }
 
 iframe
@@ -480,14 +479,21 @@ form
 {
   background-color: rgba(255,255,255, .6);
   width: 300px;
-  height: 64%;/*La référence est la hauteur de l’élément parent. 
-  Si pas de Hauteur déterminer au parents alors cela ne marchera pas*/
-  position: absolute;
-  right: 160px;
   padding: 10px;/*Avec une valeur, celle-ci définira la marge pour les quatre côtés de la boîte.*/
   padding-left: 20px; 
   padding-right: 20px;
   border-radius: 3px;
+  position: relative;
+  z-index: 2;
+  margin-top: 77px;
+}
+
+.form-container
+{
+  display: flex;
+  justify-content: flex-end;
+  width: 1200px;
+  margin: auto;
 }
 
 input 
@@ -542,15 +548,16 @@ form p
 /**********  Règles de la partie Footer  **********/
 footer
 {
-  position: absolute;
-  top: 750px;
   width: 100%;
-  height: 100px;
+  height: 90px;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  z-index: 50;
 }
 
 #icons 
@@ -667,7 +674,7 @@ footer, .copyright
     height: 70%;
   }
 
-  .fa-chevron-left, .fa-chevron-right, form
+  .fa-chevron-left, .fa-chevron-right
   {
     visibility: hidden;
   }
@@ -713,23 +720,39 @@ footer, .copyright
     padding-top: 20px;
   }
 
-  #banner form
+    #map
   {
-    visibility: visible;
-    width: 80%;
     position: relative;
-    left: 12px;
   }
 
-  .banner-text
+  footer
+  {
+    position: relative;
+    bottom: 0;
+  }
+
+  form
+  {
+    background-color: #efefef;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form-container
   {
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #c1c1c1;
+    background-color: #efefef;
   }
-
 }
+
+@media screen and (max-width: 1224px)
+{
+  .form-container
+  {
+    width: 100%;
+  }
+}
+
 /* Seulement sur les écrans dont la largeur de la fenêtre est comprise entre 768px et 1024px */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
 {
@@ -778,10 +801,26 @@ footer, .copyright
     padding-right: 0px;
   }
 
-  #banner form
+  #map
   {
-    left: 58px;
+    position: relative;
   }
+
+  form
+  {
+
+    background-color: #efefef;
+    margin: 10px;
+  }
+
+  .form-container
+  {
+    text-align: center;
+    margin: 0px;
+    justify-content: center;
+    background-color: #d7d7d7; 
+  }
+
 }
 /* Sur les écrans dont la largeur de la fenêtre fait au minimum 2000px */
 @media only screen  and (min-width : 2000px) 
@@ -796,19 +835,12 @@ footer, .copyright
   form
   {
     width: 500px;
-    height: 70%;
-    padding-top: 20px;
-    right: 1010px;
+    margin-top: 55px;
   }
 
   input
   {
     margin-bottom: 20px;
-  }
-
-  #banner form
-  {
-    display: none;
   }
 
   #slider
@@ -840,5 +872,10 @@ footer, .copyright
   .icones-pie .fa-circle, .icones-cube .fa-circle, .icones-line .fa-circle
   {
     bottom: 5px;
+  }
+
+  .form-container
+  {
+    justify-content: center;
   }
 }

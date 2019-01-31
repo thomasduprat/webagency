@@ -2,6 +2,7 @@
 Intégrez la maquette du site d'une agence web
 
 url : https://class-web-agency.netlify.com/
+support de présentation : https://docs.google.com/presentation/d/1bI2PCIcArBG8BqQDCqJsjyBb4nkoaqtoh8j6TK4K9c8/edit?usp=sharing
 
 
 - Énoncé : -
