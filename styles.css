@@ -751,6 +751,12 @@ footer, .copyright
   {
     width: 100%;
   }
+
+  footer
+  {
+    position: relative;
+    bottom: 0;
+  }
 }
 
 /* Seulement sur les écrans dont la largeur de la fenêtre est comprise entre 768px et 1024px */
